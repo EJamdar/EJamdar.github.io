@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WebVR Starter Project</title>
+    <meta name="description" content="Hello, Keyboard!">
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v1.13.0/dist/aframe-extras.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+    <script src="myfont.typeface.js"></script>
+  </head>
+  <body>
+    <a-scene>
+    <a-box width="10" height="4" depth="10" position = "3 2 -7" rotation = "0 45 0" scale = "2 .5 3" src = "camo.jpg"><a-animation atribute = "rotation" begin = "click" repeat = "indefinite" to = "0 360 0">'</a-animation>
+      /a-box>
+      <a-cylinder src = "camo.jpg" height="10" radius=".5" position = "3 5 -5" rotation = "0 90 90"></a-cylinder>
+      <a-plane src="#ground" height="100" width="100" position = "0 0 0"></a-plane>
+      <a-sky src = "31.jpg"></a-sky>
+      <a-entity id="sound-entity" sound="src: audio/mlg.mp3; autoplay: true"></a-entity>
+      <a-cylinder color="yellow" position = "-5 -5 -5" theta-start="50" theta-length="25" side="double"></a-cylinder>
+      <a-camera position="0 0 5">
+      <a-cursor color="#FFFFF">
+    </a-scene>
+  </body>
+</html>
