@@ -12,13 +12,17 @@
   </head>
   <body>
     <a-scene>
-    <a-box width="10" height="4" depth="10" position = "3 2 -7" rotation = "0 45 0" scale = "2 .5 3" src = "steve.jpg"><a-animation atribute = "rotation" begin = "click" repeat = "indefinite" to = "0 360 0">'</a-animation>
-      /a-box>
       <a-sky src = "7.jpg"></a-sky>
-      <a-entity id="sound-entity" sound="src: audio/mlg.mp3; autoplay: true"></a-entity>
 
+      <a-plane height="200" width="200" position = "3 -7 -7" rotation = "270 0  0" src = "z.jpg"></a-plane>
+      <a-plane height="200" width="200" position = "5 5 -7" rotation = "270 360  0" src = "z.jpg"></a-plane>
+      <a-plane height="100" width="200" position = "3 5 -7" rotation = "360 270  0" src = "z.jpg"></a-plane>
+      <a-plane height="100" width="200" position = "3 5 -7" rotation = "360 270  0" src = "z.jpg"></a-plane>
+      <a-plane height="100" width="200" position = "3 1 -7" rotation = "360 360  0" src = "z.jpg"></a-plane>
+       <a-collada-model src="2.dae" position  = "0 0 -7" src = "steve.jpg" scale = "2 2 2" ></a-collada-model>
       <a-camera position="0 10 5">
-      <a-cursor color="#FFFFF">
+      <a-cursor color="#FFFFF"></a-cursor>
+      </a-camera>
     </a-scene>
   </body>
 </html>
