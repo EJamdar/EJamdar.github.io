@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2016-07-27T17:54:44Z</created><keywords></keywords><modified>2016-07-27T17:54:44Z</modified><revision></revision><subject></subject><title></title><unit meter="1.000000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <library_geometries>
+    <geometry id="Tetrahedron-lib" name="TetrahedronMesh">
+      <mesh>
+        <source id="Tetrahedron-POSITION">
+          <float_array id="Tetrahedron-POSITION-array" count="12">
+0.288675 0.288675 0.288675
+-0.288675 -0.288675 0.288675
+-0.288675 0.288675 -0.288675
+0.288675 -0.288675 -0.288675
+</float_array>
+          <technique_common>
+            <accessor source="#Tetrahedron-POSITION-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Tetrahedron-Normal0">
+          <float_array id="Tetrahedron-Normal0-array" count="36">
+-0.577350 0.577350 0.577350
+-0.577350 0.577350 0.577350
+-0.577350 0.577350 0.577350
+0.577350 0.577350 -0.577350
+0.577350 0.577350 -0.577350
+0.577350 0.577350 -0.577350
+0.577350 -0.577350 0.577350
+0.577350 -0.577350 0.577350
+0.577350 -0.577350 0.577350
+-0.577350 -0.577350 -0.577350
+-0.577350 -0.577350 -0.577350
+-0.577350 -0.577350 -0.577350
+</float_array>
+          <technique_common>
+            <accessor source="#Tetrahedron-Normal0-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Tetrahedron-UV0">
+          <float_array id="Tetrahedron-UV0-array" count="24">
+0.625000 0.304087
+0.875000 0.695913
+0.375000 0.695913
+0.125000 0.304087
+0.375000 0.695913
+0.875000 0.695913
+0.125000 0.304087
+0.875000 0.695913
+0.625000 0.304087
+0.125000 0.304087
+0.625000 0.304087
+0.375000 0.695913
+</float_array>
+          <technique_common>
+            <accessor source="#Tetrahedron-UV0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Tetrahedron-VERTEX">
+          <input semantic="POSITION" source="#Tetrahedron-POSITION"/>
+        </vertices>
+        <polylist count="4"><input semantic="VERTEX" offset="0" source="#Tetrahedron-VERTEX"/><input semantic="NORMAL" offset="1" source="#Tetrahedron-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Tetrahedron-UV0"/><vcount>3 3 3 3 </vcount><p> 1 0 0 0 1 1 2 2 2 3 3 3 2 4 4 0 5 5 3 6 6 0 7 7 1 8 8 3 9 9 1 10 10 2 11 11</p></polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Illuminati-Triangle" name="Illuminati-Triangle">
+      <node name="Tetrahedron" id="Tetrahedron" sid="Tetrahedron"><matrix sid="matrix">0.706904 -0.213921 -0.674184 0.000000 0.631196 0.620923 0.464808 0.000000 0.319184 -0.754117 0.573959 -1.182800 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#Tetrahedron-lib"/><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <extra><technique profile="MAX3D"><frame_rate>29.970030</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>6.666667</end_time></technique></extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Illuminati-Triangle"></instance_visual_scene>
+  </scene>
+</COLLADA>
