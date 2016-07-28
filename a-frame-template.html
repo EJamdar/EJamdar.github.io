@@ -8,19 +8,28 @@
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v1.13.0/dist/aframe-extras.min.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
-    <script src="myfont.typeface.js"></script>
   </head>
   <body>
     <a-scene>
+    <a-entity id="sound-entity" sound="src:audio/job.mp3; autoplay: true" volume= "5"></a-entity>
       <a-sky src = "7.jpg"></a-sky>
 
       <a-plane height="200" width="200" position = "3 -7 -7" rotation = "270 0  0" src = "z.jpg"></a-plane>
-      <a-plane height="200" width="200" position = "5 5 -7" rotation = "270 360  0" src = "z.jpg"></a-plane>
-      <a-plane height="100" width="200" position = "3 5 -7" rotation = "360 270  0" src = "z.jpg"></a-plane>
-      <a-plane height="100" width="200" position = "3 5 -7" rotation = "360 270  0" src = "z.jpg"></a-plane>
       <a-plane height="100" width="200" position = "3 1 -7" rotation = "360 360  0" src = "z.jpg"></a-plane>
-      <a-collada-model  src="triangle.dae" color="#FFFFFF" position  = "3 1 -7" ></a-collada-model>
-      <a-camera position="0 10 5">
+      <a-box src = "newton.jpg" depth="2" height="7" width="5" position = "3 -2 10"><a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"></a-animation>></a-box>
+      <a-box src = "jobs.jpg" depth="2" height="7" width="5" position = "3 5 5"><a-animation attribute="rotation" repeat="indefinite" to="0 360 0"></a-animation></a-box>
+      <a-box depth="2" height="7" width="5" src = t.jpg position = "3 15 20" rotate = "0 180 0"><a-animation attribute="rotation" repeat="indefinite" to="0 360 0"></a-animation></a-box>
+      <a-box src = "money.png" depth="2" height="7" width="5" position = "3 5 20"><a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"></a-animation>></a-box>
+
+      <a-camera position="10 10 5">
       <a-cursor color="#FFFFF"></a-cursor>
       </a-camera>
     </a-scene>
